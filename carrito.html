@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="estilo_FinalBoss.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0e6e6;
+        }
+
+        .cart-container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .cart-item p {
+            margin: 10px;
+        }
+
+        .cart-total {
+            text-align: right;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Carrito de Compras</h1>
+        <div id="cart-items"></div>
+        <p class="cart-total">Total: €<span id="cart-total">0.00</span></p>
+        <button onclick="window.location.href='index.html'">Seguir comprando</button>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cartItemsContainer = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+            let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+            let total = 0;
+
+            cartItems.forEach(item => {
+                const itemElement = document.createElement("div");
+                itemElement.classList.add("cart-item");
+                itemElement.innerHTML = `
+                    <img src="${item.img}" alt="${item.name}">
+                    <p>${item.name} - ${item.size}</p>
+                    <p>€${item.price}</p>
+                `;
+                cartItemsContainer.appendChild(itemElement);
+                total += parseFloat(item.price);
+            });
+            cartTotal.textContent = total.toFixed(2);
+        });
+    </script>
+</body>
+</html>
