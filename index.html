@@ -4,74 +4,193 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="estilospotify.css">
+    <title>Nevux</title>
+    <link rel="stylesheet" href="estilo_FinalBoss.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
-<nav>
-    <h2>Navegador</h2>
-    <div class="navegador">
-        <h4>Crea tu primera lista, es muy fácil</h4>
-        <button>Lista</button>
+    <div class="cart-container" id="cart-button">
+        <a href="carrito.html">
+            <img src="https://img.icons8.com/ios-filled/50/000000/shopping-cart.png" alt="Carrito">
+            <span id="cart-count">0</span> Artículos
+        </a>
     </div>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3AJwUDP919kvQ9QcozQPxg?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>">
-</nav>
-
-
-<main>
-<article>
-    <h1>Mis favoritos</h1>
-    <a href="https://youtu.be/jdf7RxdEa3k?si=DojlAoYpgKERjcGF">
-    <div class="artista">
-    <p class="Titulo">American Wedding</p>
-    <img src="am.png" alt="american wedding">
-    <p>200k reproducciones</p>
+   
+    <!-- Contenedor del video -->
+    <h1 class="titulo-overlay">Nevux</h1>
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="videoplayback.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
     </div>
-    </a>
 
-    <a href="https://youtu.be/K1lC1U7v5ws?si=dv_Swv-tDvX6Q5ZC">
-    <div class="artista">
-    <p class="Titulo">Triple Impacto</p>
-    <img src="triple.jpg" alt="triple impacto">
-    <p>200k reproducciones</p>
-    </div>
-    </a>
 
-    <a href="https://youtu.be/lj3rRLK2hro?si=xKZrDJ6nuO0hcAUM">
-    <div class="artista">
-    <p class="Titulo">Waya Waya</p>
-    <img src="beny.jpg" alt="waya waya">
-    <p>200k reproducciones</p>
-    </div>
-    </a>
+        <!-- Contenido principal -->
+        <div class="contenido">
+            <h1>NEVUX</h1>
+            <p>Descubre nuestra nueva colección</p>
+        </div>
+    
+    
+            <!-- Catálogo de productos -->
+            <section class="catalogo">
+                <h1>Catálogo de Ropa</h1>
+                <div class="productos">
+                    <div class="producto">
+                        <img src="sud1.webp" alt="Producto 1">
+                        <p class="precio">€29.99</p>
+                        <select class="talla">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        <button class="btn">Añadir a la cesta</button>
+                    </div>
+        
+                    <div class="producto">
+                        <img src="sud2.webp" alt="Producto 2">
+                        <p class="precio">€24.99</p>
+                        <select class="talla">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        <button class="btn">Añadir a la cesta</button>
+                    </div>
+        
+                    <!-- Repite para 10 productos -->
+                    <div class="producto">
+                        <img src="sud3.webp" alt="Producto 3">
+                        <p class="precio">€19.99</p>
+                        <select class="talla">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        <button class="btn">Añadir a la cesta</button>
+                    </div>
+        
+                    <div class="producto">
+                        <img src="sud4.webp" alt="Producto 4">
+                        <p class="precio">€34.99</p>
+                        <select class="talla">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        <button class="btn">Añadir a la cesta</button>
+                    </div>
+        
+                    <div class="producto">
+                        <img src="sud5.webp" alt="Producto 5">
+                        <p class="precio">€39.99</p>
+                        <select class="talla">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        <button class="btn">Añadir a la cesta</button>
+                    </div>
+        
+                    <div class="producto">
+                        <img src="sud6.webp" alt="Producto 6">
+                        <p class="precio">€21.99</p>
+                        <select class="talla">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        <button class="btn">Añadir a la cesta</button>
+                    </div>
+        
+                    <div class="producto">
+                        <img src="sud7.webp" alt="Producto 7">
+                        <p class="precio">€27.99</p>
+                        <select class="talla">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        <button class="btn">Añadir a la cesta</button>
+                    </div>
+        
+                    <div class="producto">
+                        <img src="sud8.webp" alt="Producto 8">
+                        <p class="precio">€18.99</p>
+                        <select class="talla">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        <button class="btn">Añadir a la cesta</button>
+                    </div>
+                </div>
 
-    <a href="">
-    <div class="artista">
-    <p class="Titulo">American Wedding</p>
-    <img src="am.png" alt="american wedding">
-    <p>200k reproducciones</p>
-    </div>
-    </a>
+                <div class="producto">
+                    <img src="sud9.webp" alt="Producto 8">
+                    <p class="precio">€18.99</p>
+                    <select class="talla">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <button class="btn">Añadir a la cesta</button>
+                </div>
+            </div>
 
-    <a href="">
-    <div class="artista">
-    <p class="Titulo">American Wedding</p>
-    <img src="am.png" alt="american wedding">
-    <p>200k reproducciones</p>
-    </div>
-    </a>
+            <div class="producto">
+                <img src="sud10.jpg" alt="Producto 8">
+                <p class="precio">€18.99</p>
+                <select class="talla">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <button class="btn">Añadir a la cesta</button>
+            </div>
+            </div>
+            </section>
 
-    <a href="">
-    <div class="artista">
-    <p class="Titulo">American Wedding</p>
-    <img src="am.png" alt="american wedding">
-    <p>200k reproducciones</p>
-    </div>
-    </a>   
-
-</article>
-</main>
-
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    let cartCount = 0;
+                    const cartCounter = document.getElementById("cart-count");
+                    const buttons = document.querySelectorAll(".btn");
+                    let cartItems = [];
+        
+                    buttons.forEach(button => {
+                        button.addEventListener("click", function() {
+                            const producto = this.closest(".producto");
+                            const talla = producto.querySelector(".talla").value;
+                            if (!talla) {
+                                alert("Por favor, seleccione una talla antes de añadir al carrito.");
+                                return;
+                            }
+                            
+                            cartCount++;
+                            cartCounter.textContent = cartCount;
+                            
+                            const itemName = this.getAttribute("data-name");
+                            const itemPrice = this.getAttribute("data-price");
+                            const itemImg = producto.querySelector("img").src;
+                            cartItems.push({ name: itemName, price: itemPrice, size: talla, img: itemImg });
+                            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+                        });
+                    });
+                });
+            </script>
 </body>
 </html>

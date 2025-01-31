@@ -1,0 +1,143 @@
+/* Contenedor principal */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #f0e6e6; /* Color de fondo */
+}
+
+/* Contenedor del video */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la pantalla */
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.titulo-overlay {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600; /* Hace que el texto se vea más llamativo */
+    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+    letter-spacing: 2px;
+    position: absolute;
+    top: 10px;  /* Ajusta la distancia desde arriba */
+    left: 50%;  /* Lo posiciona en el centro */
+    transform: translateX(-50%); /* Lo ajusta para que quede perfectamente centrado */
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    z-index: 2; /* Asegura que esté sobre el video */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenido principal */
+.catalogo {
+    position: relative;
+    padding: 60px 5vw;
+    background-color: white;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Grid de productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta el número de columnas */
+    gap: 3vw; /* Espaciado proporcional a la pantalla */
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Estilos de cada producto */
+.producto {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Tamaño más pequeño de las imágenes */
+.producto img {
+    width: 100%;
+    max-height: 180px; /* Reduce la altura */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Selector de talla */
+.talla {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Botón Añadir a la cesta */
+.btn {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+/* Cesta */
+.cart-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.cart-container img {
+    width: 30px; /* Icono más pequeño */
+    height: 30px;
+}
+
+.cart-items {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
